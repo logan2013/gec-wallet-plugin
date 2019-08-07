@@ -1,0 +1,14 @@
+{
+  "name": "gec-wallet-plugin",
+  "version": "1.0.0",
+  "description": "",
+  "cordova": {
+    "id": "gec-wallet-plugin",
+    "platforms": []
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "",
+  "license": "ISC"
+}

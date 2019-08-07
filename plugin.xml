@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="gec-wallet-plugin" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+		<name>gec wallet plugin</name>
+		<js-module name="gecw" src="www/gecw.js">
+			<clobbers target="gecw" />
+		</js-module>
+		<platform name="android">
+			<config-file parent="/*" target="res/xml/config.xml">
+				<feature name="GecWalletPlugin">
+					<param name="android-package" value="com.gec.wallet.GecWalletPlugin" />
+				</feature>
+			</config-file>
+			<framework custom="true" src="src/android/gecw.gradle" type="gradleReference"/>
+			<config-file parent="/*" target="AndroidManifest.xml"></config-file>
+			<source-file src="src/android/src/com/gec/wallet/GecWalletPlugin.java" target-dir="src/com/gec/wallet" />
+			<source-file src="src/android/src/com/gec/wallet/GecMnemonicUtils.java" target-dir="src/com/gec/wallet" />
+			<source-file src="src/android/src/com/gec/wallet/GecWalletUtils.java" target-dir="src/com/gec/wallet" />
+		</platform>
+</plugin>
